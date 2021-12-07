@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+  
+    <div class="header" id="Dummy">
+      <img src="image\male.png" style="width:80px;" class="rounded-pill">
+      <button class="btn1" onclick="home()">Home</button>
+      <button class="btn2" onclick="select_tamplate()">Resume</button> 
+    </div>
+    <div id="Body_Content">
+    <div class="Body">
+      <div class="welcome">
+        <h1 style="font-size: 120px">Create Your Own.</h1>
+        <button style="font-size: 20px" class="btn3" onclick="select_tamplate()">Let's Go <span>&#8594;</span></button>      
+      </div>
+    </div>
+    </div>
+       
+<div id="tamplate" class="mt-3">
+  <div id="c1" class="card">
+    <img onclick="Displayimage()" id="tamp" class="card-img-top" src="image/4.png" alt="Card image" style="width:100%;height:65%;">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+    
+      <button onclick="Create()" class="btn">Grab Yours</button>
+    </div>
+  </div>
+  <div class="card">
+      <img onclick="Displayimage1()" id="tamp1" class="card-img-top" src="image/7.png" alt="Card image" style="width:100%;height:65%;">
+      <div class="card-body">
+      <h4 class="card-title">Jane Doe</h4>
+      <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+      <button onclick="Create1()"  class="btn">Grab Yours</button>
+    </div>
+  </div>
+  <div class="card">
+    <img onclick="Displayimage2()" id="tamp2" class="card-img-top" src="image/3.jpg" alt="Card image" style="width:100%;height:65%;">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <button onclick="Create2()"  class="btn">Grab Yours</button>
+    </div>
+  </div>
+  <div class="card">
+      <img onclick="Displayimage3()" id="tamp3" class="card-img-top" src="image/6.jpg" alt="Card image" style="width:100%;height:65%;">
+      <div class="card-body">
+      <h4 class="card-title">Jane Doe</h4>
+      <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+      <button onclick="Create3()"  class="btn">Grab Yours</button>
+    </div>
+  </div>
+  <div class="card">
+    <img onclick="Displayimage4()" id="tamp4" class="card-img-top" src="image/8.jpg" alt="Card image" style="width:100%;height:65%;">
+    <div class="card-body">
+    <h4 class="card-title">Jane Doe</h4>
+    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+    <button onclick="Create4()" class="btn">Grab Yours</button>
+  </div>
+</div>
+</div>
+<div id="form">
+  <form id="create">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Full Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="Full Name" onchange="fullNme(event)" placeholder="Your full name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="desig">Designation</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="desig" name="Designation" onchange="designa(event)" placeholder="Your designation">
+        </div>
+      </div><div class="row">
+        <div class="col-25">
+          <label for="Cnumber">Contact Number</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="Cnumber" name="Cnumber" onchange="contnumber(event)" placeholder="Your Contact Number">
+        </div>
+      </div><div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" name="Email" onchange="emailadd(event)" placeholder="Your Email..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="other">Other Site</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="other" name="Other Site" onchange="ossite(event)" placeholder="like facebook,twetter..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="file">Photo</label>
+        </div>
+        <div class="col-75">
+          <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: block;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="address">Address</label>
+        </div>
+        <div class="col-75">
+          <textarea id="address" name="subject" onchange="ad_dree(event)" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="summary">Summary</label>
+        </div>
+        <div class="col-75">
+          <textarea id="summary" name="subject" onchange="summ(event)" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="education">Education</label>
+        </div>
+        <div class="col-75">
+          <textarea id="education" name="subject" onchange="educ(event)" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="experience">Experience</label>
+        </div>
+        <div class="col-75">
+          <textarea id="experience" name="subject" onchange="exper(event)" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+  </form>
+  <button id="Submit" onclick="Data()"> Submit </button>
+</div>
+
+
+  <div id="box">
+    
+<div class="row">
+  <div class="col-25">
+    <img id="promage" />
+  </div>
+  <div class="col-75">
+   <h1 style="text-align: center;"><p id="fulName"></p></h1>
+    <h2 style="text-align: center;"><p id="deg"></p></h2>
+    <p style="text-align: center;" id="A_ddress"></p>
+  
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col-25" id="cv">
+    <h1 style="text-align: center;"><u>Contact</u></h1>
+    <p id="e_mail"></p>
+    <p id="c_nmber"></p>
+    <p id="oss"></p>
+  </div>
+  <div class="col-75">
+    <h1><u>Summary</u></h1>
+    <p id="s_mmry"></p>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col-25" id="cv">
+    <h1><u>Skill</u></h1>
+    <p id="s_kil"></p>
+  </div>
+  <div class="col-75">
+    <h1><u>Education</u></h1>
+    <p id="e_du"></p>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col-25" id="cv">
+    <h1><u>Langguage</u></h1>
+    <p id="lan_S"></p>
+  </div>
+  <div class="col-75">
+    <h1><u>Experience</u></h1>
+    <p id="e_xper"></p>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col-25" id="cv">
+    <h1><u>Interest</u></h1>
+    <p id="inter"></p>
+  </div>
+  <div class="col-75">
+    <h1><u>References</u></h1>
+    <p id="e_du"></p>
+  </div>
+</div>
+</div>
+
+<div id="footer_div">
+  <p><span>&#169;</span> Mr. Amir</p>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+  var fullNme = function(event) {
+    var NewnAme = document.getElementById('fname').value;
+    document.getElementById('fulName').innerHTML=NewnAme;
+  
+  };
+  var contnumber = function(event) {
+    var NewnAme = document.getElementById('Cnumber').value;
+    document.getElementById('c_nmber').innerHTML=NewnAme;
+  
+  };
+  var emailadd = function(event) {
+    var NewnAme = document.getElementById('email').value;
+    document.getElementById('e_mail').innerHTML=NewnAme;
+  
+  };
+  var ossite = function(event) {
+    var NewnAme = document.getElementById('other').value;
+    document.getElementById('oss').innerHTML=NewnAme;
+  
+  };
+
+  var ad_dree = function(event) {
+    var NewnAme = document.getElementById('address').value;
+    document.getElementById('A_ddress').innerHTML=NewnAme;
+  
+  };
+
+  var designa = function(event) {
+    var NewnAme = document.getElementById('desig').value;
+    document.getElementById('deg').innerHTML=NewnAme;
+  
+  };
+
+  var loadFile = function(event) {
+    var image = document.getElementById('promage');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+  var summ = function(event) {
+    var summmm = document.getElementById('summary').value;
+    document.getElementById('s_mmry').innerHTML=summmm;
+  
+  };
+  var educ = function(event) {
+    var summmm = document.getElementById('education').value;
+    document.getElementById('e_du').innerHTML=summmm;
+  };
+  var exper = function(event) {
+    var summmm = document.getElementById('experience').value;
+    document.getElementById('e_xper').innerHTML=summmm;
+  };
+
+  </script>
+</body>
+</html>
